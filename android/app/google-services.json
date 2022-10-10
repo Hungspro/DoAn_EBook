@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "773845677948",
+    "project_id": "ebook-flutter-5056e",
+    "storage_bucket": "ebook-flutter-5056e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773845677948:android:9beb12ff99a0d434a856f9",
+        "android_client_info": {
+          "package_name": "com.example.doan_ebook_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773845677948-387tfs3nootfai8gphvu13sg5r3lq9hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYV663S1DeuJipWodHcRgDWKQ9y8aYrkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773845677948-387tfs3nootfai8gphvu13sg5r3lq9hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
