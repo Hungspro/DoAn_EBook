@@ -1,5 +1,4 @@
 import 'package:doan_ebook_1/pages/home/widgets/book_staggered_grid_view.dart';
-import 'package:doan_ebook_1/pages/home/widgets/custom_tab.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -18,15 +17,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _buildAppBar(),
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(70.0),
+      child: _buildAppBar(),
+      ),
       body: Column(
         children: [
-          CustomTab(tabIndex, (int index) {
-            setState(() {
-              tabIndex = index;
-            });
-            pageController.jumpToPage(index);
-          }),
+          // CustomTab(tabIndex, (int index) {
+          //   setState(() {
+          //     tabIndex = index;
+          //   });
+          //   pageController.jumpToPage(index);
+          // }),
           Expanded(
               child: BookStaggeredGridView(
                   tabIndex,
@@ -36,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                       })))
         ],
       ),
-      bottomNavigationBar: _buildBottomNavigationBar(),
+      // bottomNavigationBar: _buildBottomNavigationBar(),
     );
   }
 
@@ -100,12 +102,14 @@ AppBar _buildAppBar() {
         fontSize: 18,
       ),
     ),
+    
     actions: [
+      IconButton(onPressed: () {}, icon: const Icon(Icons.search_outlined, color: Colors.black,)),
       PopupMenuButton<int>(
-        icon: Icon(Icons.more_horiz_outlined, color: Colors.black,),
+        icon: const Icon(Icons.more_horiz_outlined, color: Colors.black,),
         itemBuilder: (_) => [
           PopupMenuItem(
-            child: Text('Log out'),
+            child: const Text('Log out'),
             onTap: () => FirebaseAuth.instance.signOut(),
             ),
         ]

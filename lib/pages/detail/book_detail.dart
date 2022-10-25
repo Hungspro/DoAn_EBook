@@ -10,7 +10,7 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: _buildAppBar(context),
       backgroundColor: Colors.white,
-      body: Center(
+      body: const Center(
         child: Text('DetailPage')
         ),
     );

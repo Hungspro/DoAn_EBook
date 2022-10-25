@@ -1,6 +1,5 @@
-import 'package:doan_ebook_1/pages/login/login.dart';
+import 'package:doan_ebook_1/pages/authentication/login.dart';
 import 'package:flutter/material.dart';
-
 import 'signup.dart';
 
 class AuthPage extends StatefulWidget {

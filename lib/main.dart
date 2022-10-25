@@ -1,8 +1,8 @@
 import 'package:doan_ebook_1/pages/home/home.dart';
-import 'package:doan_ebook_1/pages/login/auth_page.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:doan_ebook_1/pages/authentication/auth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
@@ -39,14 +39,14 @@ class MainPage extends StatelessWidget {
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting){
-                return Center(child: CircularProgressIndicator(),);
+                return const Center(child: CircularProgressIndicator(),);
               }else if (snapshot.hasError){
-                return Center(child: Text('Something went wrong!!!'), );
+                return const Center(child: Text('Something went wrong!!!'), );
               }
               else if (snapshot.hasData) {
-                return HomePage();
+                return const HomePage();
               } else {
-                return AuthPage();
+                return const AuthPage();
               }
             }),
       );

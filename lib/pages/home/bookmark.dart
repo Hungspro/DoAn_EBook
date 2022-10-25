@@ -10,7 +10,7 @@ class BookMark extends StatefulWidget {
 class  _BookMarkState extends State <BookMark> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Text('this is bookmark'),
